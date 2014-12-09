@@ -57,7 +57,7 @@ public class DeformMesh : MonoBehaviour
         //Left Click
         if (Input.GetMouseButton(1))
         {
-               RaycastHit hit;
+            RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
@@ -86,7 +86,7 @@ public class DeformMesh : MonoBehaviour
             }
         }
         if (Input.GetKeyDown(KeyCode.E))
-            this.RotateFrontFace(180f);
+            this.RotateFrontFace(Mathf.PI*0.25f);
     }
 
     //Creates the mesh that will be manipluated
@@ -116,7 +116,7 @@ public class DeformMesh : MonoBehaviour
             myMeshFilter.mesh = new Mesh();
             myMesh = myMeshFilter.sharedMesh;
         }
-        MeshCollider meshCollider = GetComponent < MeshCollider>();
+        MeshCollider meshCollider = GetComponent<MeshCollider>();
         if (meshCollider == null)
         {
             Debug.LogError("Mesh Collider not found");
@@ -147,7 +147,7 @@ public class DeformMesh : MonoBehaviour
         myTriangles.Add(2); myTriangles.Add(3); myTriangles.Add(0);
         //Back Plane
         myTriangles.Add(4); myTriangles.Add(5); myTriangles.Add(6);
-        myTriangles.Add(6); myTriangles.Add(7); myTriangles.Add(4);    
+        myTriangles.Add(6); myTriangles.Add(7); myTriangles.Add(4);
         //Left Plane
         myTriangles.Add(8); myTriangles.Add(9); myTriangles.Add(10);
         myTriangles.Add(10); myTriangles.Add(11); myTriangles.Add(8);
@@ -228,7 +228,7 @@ public class DeformMesh : MonoBehaviour
         for (long i = 0; i < TTrianglesCount; i += 3)
         {
             long t1 = TTriangles[i + 0];
-            long t2 = TTriangles[i+1];
+            long t2 = TTriangles[i + 1];
             long t3 = TTriangles[i + 2];
 
             Vector3 v1 = TVertices[t1];
@@ -252,17 +252,17 @@ public class DeformMesh : MonoBehaviour
             float i2 = u3.y - u1.y;
 
             float div = (s1 * i2) - (s2 * i1);
-            float r = div == 0.0f ? 0.0f : 1.0f/div;
+            float r = div == 0.0f ? 0.0f : 1.0f / div;
 
-            Vector3 sdir = new Vector3((i2*x1 - i1*x2) * r, (i2 * y1 - i1 *y2)*r, (i2*z1-i1*z2)*r);
+            Vector3 sdir = new Vector3((i2 * x1 - i1 * x2) * r, (i2 * y1 - i1 * y2) * r, (i2 * z1 - i1 * z2) * r);
             Vector3 tdir = new Vector3((s2 * x2 - s1 * x1) * r, (s2 * y2 - s1 * y1) * r, (s2 * z2 - s1 * z1) * r);
 
             tan1[t1] += sdir;
             tan1[t2] += sdir;
             tan1[t3] += sdir;
 
-            tan2[t1] += tdir; 
-            tan2[t1] += tdir; 
+            tan2[t1] += tdir;
+            tan2[t1] += tdir;
             tan2[t1] += tdir;
         }
 
@@ -275,7 +275,7 @@ public class DeformMesh : MonoBehaviour
             tangents[a].x = t.x;
             tangents[a].y = t.y;
             tangents[a].z = t.z;
-            tangents[a].w = (Vector3.Dot(Vector3.Cross(n,t),tan2[a])<0.0f)? -1.0f : 1.0f;
+            tangents[a].w = (Vector3.Dot(Vector3.Cross(n, t), tan2[a]) < 0.0f) ? -1.0f : 1.0f;
         }
 
         TMesh.tangents = tangents;
@@ -305,11 +305,13 @@ public class DeformMesh : MonoBehaviour
         return Mathf.Sqrt((Mathf.Pow((start.x - end.x), 2) + Mathf.Pow((start.y - end.y), 2) + Mathf.Pow((start.z - end.z), 2)));
     }
 
+    //Increment and decrement the X,Y or Z position of a vector3
+
     //Change the Y position of a point in the positive direction
     private void ChangeYpos(Vector3 point)
     {
         int index = -1;
-        for(int i = 0; i < myPoints.Count; i++)
+        for (int i = 0; i < myPoints.Count; i++)
         {
             if (myPoints[i] == point)
             {
@@ -449,105 +451,10 @@ public class DeformMesh : MonoBehaviour
         }
     }
 
-    //Rotating the Left face, parameter of Clockwise or Anticlockwise
-    private void RotateLeftFace(string dir)
-    {
-        if (dir == "Clockwise")
-        {
-            Vector3 t = myPoints[0];
-            myPoints[0] = myPoints[5];
-            myPoints[5] = myPoints[6];
-            myPoints[6] = myPoints[3];
-            myPoints[3] = t;
-            updateMesh();
-        }
-        else if (dir == "Anticlockwise")
-        {
-            Vector3 t = myPoints[0];
-            myPoints[0] = myPoints[3];
-            myPoints[3] = myPoints[6];
-            myPoints[6] = myPoints[5];
-            myPoints[5] = t;
-            updateMesh();
-        }
-        else
-            Debug.LogError("Invalid turn for face");
-    }
 
-    //Rotating the Right face, parameter of Clockwise or Anticlockwise
-    private void RotateRightFace(string dir)
-    {
-        if (dir == "Clockwise")
-        {
-            Vector3 t = myPoints[1];
-            myPoints[1] = myPoints[4];
-            myPoints[4] = myPoints[7];
-            myPoints[7] = myPoints[2];
-            myPoints[2] = t;
-            updateMesh();
-        }
-        else if (dir == "Anticlockwise")
-        {
-            Vector3 t = myPoints[1];
-            myPoints[1] = myPoints[2];
-            myPoints[2] = myPoints[7];
-            myPoints[7] = myPoints[4];
-            myPoints[4] = t;
-            updateMesh();
-        }
-        else
-            Debug.LogError("Invalid turn for face");
-    }
 
-    //Rotating the Top face, parameter of Clockwise or Anticlockwise
-    private void RotateTopFace(string dir)
-    {
-        if (dir == "Clockwise")
-        {
-            Vector3 t = myPoints[0];
-            myPoints[0] = myPoints[5];
-            myPoints[5] = myPoints[4];
-            myPoints[4] = myPoints[1];
-            myPoints[1] = t;
-            updateMesh();
-        }
-        else if (dir == "Anticlockwise")
-        {
-            Vector3 t = myPoints[0];
-            myPoints[0] = myPoints[1];
-            myPoints[1] = myPoints[4];
-            myPoints[4] = myPoints[5];
-            myPoints[5] = t;
-            updateMesh();
-        }
-        else
-            Debug.LogError("Invalid turn for face");
-    }
+    //Face Rotations
 
-    //Rotating the Bottom face, parameter of Clockwise or Anticlockwise
-    private void RotateBottomFace(string dir)
-    {
-        if (dir == "Clockwise")
-        {
-            Vector3 t = myPoints[2];
-            myPoints[2] = myPoints[3];
-            myPoints[3] = myPoints[6];
-            myPoints[6] = myPoints[7];
-            myPoints[7] = t;
-            updateMesh();
-        }
-        else if (dir == "Anticlockwise")
-        {
-            Vector3 t = myPoints[2];
-            myPoints[2] = myPoints[7];
-            myPoints[7] = myPoints[6];
-            myPoints[6] = myPoints[3];
-            myPoints[3] = t;
-            updateMesh();
-        }
-        else
-            Debug.LogError("Invalid turn for face");
-    }
 
     //Rotating the Front face, parameter of Clockwise or Anticlockwise
     private void RotateFrontFace(string dir)
@@ -572,6 +479,45 @@ public class DeformMesh : MonoBehaviour
         }
         else
             Debug.LogError("Invalid turn for face");
+    }
+
+    //Rotate the front face by theta degrees.
+    private void RotateFrontFace(float theta)
+    {
+        //Temp variable to hold the point to change
+        Vector3 t = myPoints[0];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[0].x + Mathf.Sin(theta) * myPoints[0].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[0].x + Mathf.Cos(theta) * myPoints[0].y;
+        //Make the point equal to the new position
+        myPoints[0] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[1];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[1].x + Mathf.Sin(theta) * myPoints[1].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[1].x + Mathf.Cos(theta) * myPoints[1].y;
+        //Make the point equal to the new position
+        myPoints[1] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[2];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[2].x + Mathf.Sin(theta) * myPoints[2].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[2].x + Mathf.Cos(theta) * myPoints[2].y;
+        //Make the point equal to the new position
+        myPoints[2] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[3];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[3].x + Mathf.Sin(theta) * myPoints[3].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[3].x + Mathf.Cos(theta) * myPoints[3].y;
+        //Make the point equal to the new position
+        myPoints[3] = t;
+
+        //Update the mesh to reflect the changes
+        updateMesh();
     }
 
     //Rotating the Back face, parameter of Clockwise or Anticlockwise
@@ -599,15 +545,206 @@ public class DeformMesh : MonoBehaviour
             Debug.LogError("Invalid turn for face");
     }
 
+    //Rotate the back face by theta degrees.
+    private void RotateBackFace(float theta)
+    {
+        //Temp variable to hold the point to change
+        Vector3 t = myPoints[4];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[4].x + Mathf.Sin(theta) * myPoints[4].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[4].x + Mathf.Cos(theta) * myPoints[4].y;
+        //Make the point equal to the new position
+        myPoints[4] = t;
 
-    //Rotate the front face by theta degrees.
-    private void RotateFrontFace(float theta)
+        //Temp variable to hold the point to change
+        t = myPoints[5];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[5].x + Mathf.Sin(theta) * myPoints[5].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[5].x + Mathf.Cos(theta) * myPoints[5].y;
+        //Make the point equal to the new position
+        myPoints[5] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[6];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[6].x + Mathf.Sin(theta) * myPoints[6].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[6].x + Mathf.Cos(theta) * myPoints[6].y;
+        //Make the point equal to the new position
+        myPoints[6] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[7];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[7].x + Mathf.Sin(theta) * myPoints[7].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[7].x + Mathf.Cos(theta) * myPoints[7].y;
+        //Make the point equal to the new position
+        myPoints[7] = t;
+
+        //Update the mesh to reflect the changes
+        updateMesh();
+    }
+
+    //Rotating the Left face, parameter of Clockwise or Anticlockwise
+    private void RotateLeftFace(string dir)
+    {
+        if (dir == "Clockwise")
+        {
+            Vector3 t = myPoints[0];
+            myPoints[0] = myPoints[5];
+            myPoints[5] = myPoints[6];
+            myPoints[6] = myPoints[3];
+            myPoints[3] = t;
+            updateMesh();
+        }
+        else if (dir == "Anticlockwise")
+        {
+            Vector3 t = myPoints[0];
+            myPoints[0] = myPoints[3];
+            myPoints[3] = myPoints[6];
+            myPoints[6] = myPoints[5];
+            myPoints[5] = t;
+            updateMesh();
+        }
+        else
+            Debug.LogError("Invalid turn for face");
+    }
+
+    //Rotate the left face by theta degrees.
+    private void RotateLeftFace(float theta)
     {
         //Temp variable to hold the point to change
         Vector3 t = myPoints[0];
         //Some Math
         t.x = Mathf.Cos(theta) * myPoints[0].x + Mathf.Sin(theta) * myPoints[0].y;
-        t.y =  (- Mathf.Sin(theta)) * myPoints[0].x + Mathf.Cos(theta) * myPoints[0].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[0].x + Mathf.Cos(theta) * myPoints[0].y;
+        //Make the point equal to the new position
+        myPoints[0] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[5];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[5].x + Mathf.Sin(theta) * myPoints[5].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[5].x + Mathf.Cos(theta) * myPoints[5].y;
+        //Make the point equal to the new position
+        myPoints[5] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[6];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[6].x + Mathf.Sin(theta) * myPoints[6].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[6].x + Mathf.Cos(theta) * myPoints[6].y;
+        //Make the point equal to the new position
+        myPoints[6] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[3];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[3].x + Mathf.Sin(theta) * myPoints[3].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[3].x + Mathf.Cos(theta) * myPoints[3].y;
+        //Make the point equal to the new position
+        myPoints[3] = t;
+
+        //Update the mesh to reflect the changes
+        updateMesh();
+    }
+
+    //Rotating the Right face, parameter of Clockwise or Anticlockwise
+    private void RotateRightFace(string dir)
+    {
+        if (dir == "Clockwise")
+        {
+            Vector3 t = myPoints[1];
+            myPoints[1] = myPoints[4];
+            myPoints[4] = myPoints[7];
+            myPoints[7] = myPoints[2];
+            myPoints[2] = t;
+            updateMesh();
+        }
+        else if (dir == "Anticlockwise")
+        {
+            Vector3 t = myPoints[1];
+            myPoints[1] = myPoints[2];
+            myPoints[2] = myPoints[7];
+            myPoints[7] = myPoints[4];
+            myPoints[4] = t;
+            updateMesh();
+        }
+        else
+            Debug.LogError("Invalid turn for face");
+    }
+
+    //Rotate the right face by theta degrees.
+    private void RotateRightFace(float theta)
+    {
+        //Temp variable to hold the point to change
+        Vector3 t = myPoints[4];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[4].x + Mathf.Sin(theta) * myPoints[4].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[4].x + Mathf.Cos(theta) * myPoints[4].y;
+        //Make the point equal to the new position
+        myPoints[4] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[1];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[1].x + Mathf.Sin(theta) * myPoints[1].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[1].x + Mathf.Cos(theta) * myPoints[1].y;
+        //Make the point equal to the new position
+        myPoints[1] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[2];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[2].x + Mathf.Sin(theta) * myPoints[2].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[2].x + Mathf.Cos(theta) * myPoints[2].y;
+        //Make the point equal to the new position
+        myPoints[2] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[7];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[7].x + Mathf.Sin(theta) * myPoints[7].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[7].x + Mathf.Cos(theta) * myPoints[7].y;
+        //Make the point equal to the new position
+        myPoints[7] = t;
+
+        //Update the mesh to reflect the changes
+        updateMesh();
+    }
+
+    //Rotating the Top face, parameter of Clockwise or Anticlockwise
+    private void RotateTopFace(string dir)
+    {
+        if (dir == "Clockwise")
+        {
+            Vector3 t = myPoints[0];
+            myPoints[0] = myPoints[5];
+            myPoints[5] = myPoints[4];
+            myPoints[4] = myPoints[1];
+            myPoints[1] = t;
+            updateMesh();
+        }
+        else if (dir == "Anticlockwise")
+        {
+            Vector3 t = myPoints[0];
+            myPoints[0] = myPoints[1];
+            myPoints[1] = myPoints[4];
+            myPoints[4] = myPoints[5];
+            myPoints[5] = t;
+            updateMesh();
+        }
+        else
+            Debug.LogError("Invalid turn for face");
+    }
+
+    //Rotate the top face by theta degrees.
+    private void RotateTopFace(float theta)
+    {
+        //Temp variable to hold the point to change
+        Vector3 t = myPoints[0];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[0].x + Mathf.Sin(theta) * myPoints[0].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[0].x + Mathf.Cos(theta) * myPoints[0].y;
         //Make the point equal to the new position
         myPoints[0] = t;
 
@@ -618,6 +755,70 @@ public class DeformMesh : MonoBehaviour
         t.y = (-Mathf.Sin(theta)) * myPoints[1].x + Mathf.Cos(theta) * myPoints[1].y;
         //Make the point equal to the new position
         myPoints[1] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[4];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[4].x + Mathf.Sin(theta) * myPoints[4].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[4].x + Mathf.Cos(theta) * myPoints[4].y;
+        //Make the point equal to the new position
+        myPoints[4] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[5];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[5].x + Mathf.Sin(theta) * myPoints[5].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[5].x + Mathf.Cos(theta) * myPoints[5].y;
+        //Make the point equal to the new position
+        myPoints[5] = t;
+
+        //Update the mesh to reflect the changes
+        updateMesh();
+    }
+
+    //Rotating the Bottom face, parameter of Clockwise or Anticlockwise
+    private void RotateBottomFace(string dir)
+    {
+        if (dir == "Clockwise")
+        {
+            Vector3 t = myPoints[2];
+            myPoints[2] = myPoints[3];
+            myPoints[3] = myPoints[6];
+            myPoints[6] = myPoints[7];
+            myPoints[7] = t;
+            updateMesh();
+        }
+        else if (dir == "Anticlockwise")
+        {
+            Vector3 t = myPoints[2];
+            myPoints[2] = myPoints[7];
+            myPoints[7] = myPoints[6];
+            myPoints[6] = myPoints[3];
+            myPoints[3] = t;
+            updateMesh();
+        }
+        else
+            Debug.LogError("Invalid turn for face");
+    }
+
+    //Rotate the bottom face by theta degrees.
+    private void RotateBottomFace(float theta)
+    {
+        //Temp variable to hold the point to change
+        Vector3 t = myPoints[6];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[6].x + Mathf.Sin(theta) * myPoints[6].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[6].x + Mathf.Cos(theta) * myPoints[6].y;
+        //Make the point equal to the new position
+        myPoints[6] = t;
+
+        //Temp variable to hold the point to change
+        t = myPoints[7];
+        //Some Math
+        t.x = Mathf.Cos(theta) * myPoints[7].x + Mathf.Sin(theta) * myPoints[7].y;
+        t.y = (-Mathf.Sin(theta)) * myPoints[7].x + Mathf.Cos(theta) * myPoints[7].y;
+        //Make the point equal to the new position
+        myPoints[7] = t;
 
         //Temp variable to hold the point to change
         t = myPoints[2];
