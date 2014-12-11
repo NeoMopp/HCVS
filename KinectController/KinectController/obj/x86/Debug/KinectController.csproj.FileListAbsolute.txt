@@ -1,0 +1,11 @@
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\bin\Debug\KinectController.exe
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\bin\Debug\KinectController.pdb
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\MainWindow.baml
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\MainWindow.g.cs
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\App.g.cs
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\KinectController_MarkupCompile.cache
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\KinectController.g.resources
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\KinectController.Properties.Resources.resources
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\KinectController.csproj.GenerateResource.Cache
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\KinectController.exe
+C:\Users\SoCS\Documents\HCVS\KinectController\KinectController\obj\x86\Debug\KinectController.pdb

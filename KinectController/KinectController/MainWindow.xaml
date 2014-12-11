@@ -1,0 +1,11 @@
+﻿<Window x:Class="KinectController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="520" Width="660" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <Canvas Height="480" HorizontalAlignment="Left" Name="canvas1" VerticalAlignment="Top" Width="640">
+            <Image Canvas.Left="0" Canvas.Top="1" Height="480" Name="Vid" Stretch="Fill" Width="640                " />
+            <Image Canvas.Left="10" Canvas.Top="10" Height="150" Name="face" Source="/KinectController;component/Images/forge%20geez.jpg" Stretch="Fill" Width="200" />
+        </Canvas>
+    </Grid>
+</Window>
