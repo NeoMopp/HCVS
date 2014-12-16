@@ -4,8 +4,9 @@
         Title="MainWindow" Height="520" Width="660" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
         <Canvas Height="480" HorizontalAlignment="Left" Name="canvas1" VerticalAlignment="Top" Width="640">
-            <Image Canvas.Left="0" Canvas.Top="1" Height="480" Name="Vid" Stretch="Fill" Width="640                " />
-            <Image Canvas.Left="10" Canvas.Top="10" Height="150" Name="face" Source="/KinectController;component/Images/forge%20geez.jpg" Stretch="Fill" Width="200" />
+            <Image Canvas.Left="0" Canvas.Top="1" Height="480" Name="Vid" Stretch="Fill" Width="640" />
+            <Image Canvas.Left="6" Canvas.Top="6" Height="71" Name="face" Source="/KinectController;component/Images/forge%20geez.jpg" Stretch="Fill" Width="82" />
+            <Image Canvas.Left="6" Canvas.Top="6" Height="71" Name="face2" Source="/KinectController;component/Images/forge%20geez.jpg" Stretch="Fill" Width="82" />
         </Canvas>
     </Grid>
 </Window>

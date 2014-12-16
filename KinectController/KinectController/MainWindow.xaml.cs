@@ -18,8 +18,10 @@ namespace KinectController
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : Window
     {
+        //int previousX=0, previousY =0;
         public MainWindow()
         {
             InitializeComponent();
@@ -85,6 +87,7 @@ namespace KinectController
 
         private void GetCameraPoint(Skeleton me, AllFramesReadyEventArgs e)
         {
+            //int diffX , diffY;
             using (DepthImageFrame depth = e.OpenDepthImageFrame())
             {
                 if (depth == null || sensor == null)
@@ -92,12 +95,32 @@ namespace KinectController
 
                 DepthImagePoint headDepthPoint = depth.MapFromSkeletonPoint(me.Joints[JointType.HandLeft].Position);
                 ColorImagePoint headColourPoint = depth.MapToColorImagePoint(headDepthPoint.X, headDepthPoint.Y, ColorImageFormat.RgbResolution640x480Fps30);
+                //if (previousX == 0 && previousY == 0)
+                //{
+                //    previousX = headDepthPoint.X;
+                //    previousY = headDepthPoint.Y;
+                //}
+                //else
+                //{
+                //    diffX = headDepthPoint.X - previousX;
+                //    diffY = headDepthPoint.Y-  previousY;
+                //    previousX = headDepthPoint.X;
+                //    previousY = headDepthPoint.Y;
+                //    Canvas.SetLeft(face2, previousX - face.Width / 2);
+                //    Canvas.SetTop(face2, previousY - face.Height / 2);
+                   
+                //}
 
                 Canvas.SetLeft(face, headColourPoint.X - face.Width / 2);
-                Canvas.SetTop(face, headColourPoint.Y - face.Height / 2);
+                Canvas.SetTop(face, headColourPoint.Y - face.Height / 2);            
 
             }
         }
+
+        //private void DistanceTravelled()
+        //{
+
+        //}
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
