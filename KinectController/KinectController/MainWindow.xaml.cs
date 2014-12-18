@@ -21,7 +21,6 @@ namespace KinectController
 
     public partial class MainWindow : Window
     {
-        //int previousX=0, previousY =0;
         public MainWindow()
         {
             InitializeComponent();
@@ -87,39 +86,36 @@ namespace KinectController
 
         private void GetCameraPoint(Skeleton me, AllFramesReadyEventArgs e)
         {
-            //int diffX , diffY;
+            outputBox.Text = null;
             using (DepthImageFrame depth = e.OpenDepthImageFrame())
             {
                 if (depth == null || sensor == null)
                     return;
 
-                DepthImagePoint headDepthPoint = depth.MapFromSkeletonPoint(me.Joints[JointType.HandLeft].Position);
-                ColorImagePoint headColourPoint = depth.MapToColorImagePoint(headDepthPoint.X, headDepthPoint.Y, ColorImageFormat.RgbResolution640x480Fps30);
-                //if (previousX == 0 && previousY == 0)
-                //{
-                //    previousX = headDepthPoint.X;
-                //    previousY = headDepthPoint.Y;
-                //}
-                //else
-                //{
-                //    diffX = headDepthPoint.X - previousX;
-                //    diffY = headDepthPoint.Y-  previousY;
-                //    previousX = headDepthPoint.X;
-                //    previousY = headDepthPoint.Y;
-                //    Canvas.SetLeft(face2, previousX - face.Width / 2);
-                //    Canvas.SetTop(face2, previousY - face.Height / 2);
-                   
-                //}
+                DepthImagePoint handLeftDepthPoint =   depth.MapFromSkeletonPoint(me.Joints[JointType.HandLeft].Position);
+                ColorImagePoint handLeftColourPoint = depth.MapToColorImagePoint(handLeftDepthPoint.X, handLeftDepthPoint.Y, ColorImageFormat.RgbResolution640x480Fps30);
 
-                Canvas.SetLeft(face, headColourPoint.X - face.Width / 2);
-                Canvas.SetTop(face, headColourPoint.Y - face.Height / 2);            
+                DepthImagePoint handRightDepthPoint = depth.MapFromSkeletonPoint(me.Joints[JointType.HandRight].Position);
+                ColorImagePoint handRightColourPoint = depth.MapToColorImagePoint(handRightDepthPoint.X, handRightDepthPoint.Y, ColorImageFormat.RgbResolution640x480Fps30);
+                
 
+                Canvas.SetLeft(face, handLeftColourPoint.X - face.Width / 2);
+                Canvas.SetTop(face, handLeftColourPoint.Y - face.Height / 2);
+
+                Canvas.SetLeft(face2, handRightColourPoint.X - face2.Width / 2);
+                Canvas.SetTop(face2, handRightColourPoint.Y - face.Height / 2);
+
+
+                outputBox.Text += "Left Hand X: " + handLeftColourPoint.X +" Left Hand Y: "+ handLeftColourPoint.Y +"\nRight Hand X: "+ handRightColourPoint.X +" Right Hand Y: "+ handRightColourPoint.Y;
+
+                  
             }
         }
 
-        //private void DistanceTravelled()
+        //private int forceGenerated(int start, int end, int mass, int frames)
         //{
-
+                //int force = mass*()
+                //return force
         //}
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
