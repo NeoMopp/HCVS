@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\STL\Editor\STLMenuItem.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Deformable\readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/SoCS/Documents/HCVS/ForgeUnity/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
