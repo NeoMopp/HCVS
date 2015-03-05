@@ -9,3 +9,6 @@ C:\Users\SoCS\Documents\HCVS\ForgeUnity\Temp\bin\Debug\ICSharpCode.NRefactory.dl
 C:\Users\SoCS\Documents\HCVS\ForgeUnity\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
 C:\Users\SoCS\Documents\HCVS\ForgeUnity\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\SoCS\Documents\HCVS\ForgeUnity\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\SoCS\Documents\HCVS\ForgeUnity\Temp\bin\Debug\OpenNI.Net.dll
+C:\Users\SoCS\Documents\HCVS\ForgeUnity\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\SoCS\Documents\HCVS\ForgeUnity\Temp\bin\Debug\ZDK.dll

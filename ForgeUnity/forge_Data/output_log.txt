@@ -20,8 +20,7 @@ Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Op
 Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\OpenNI.Net.dll into Unity Child Domain
 Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\ZDK.dll (this message is harmless)
 Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\ZDK.dll into Unity Child Domain
-- Completed reload, in  0.443 seconds
+- Completed reload, in  0.058 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\System.Core.dll (this message is harmless)
