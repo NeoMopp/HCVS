@@ -5,10 +5,17 @@ using System.Collections.Generic;
 public class GUIScript : MonoBehaviour 
 {
     bool gui = true;
+
+    public void Print()
+    {
+        MeshFilter[] mesh = getMeshFilter(gameObject);
+        Debug.Log(STL.ExportBinary(mesh));
+    }
+
    
    //Creates GUI buttons, relies on script being attached to the intended object.
     private void OnGUI()
-    {
+    { 
         //Normal menu starts here
         if (gui)
         {
