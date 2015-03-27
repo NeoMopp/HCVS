@@ -90,6 +90,9 @@ using System.Text;
 
 public class STL
 {
+	public static readonly Quaternion CoordTransform = Quaternion.AngleAxis(-90, Vector3.left) * Quaternion.AngleAxis(-90, Vector3.up);
+	public static float HeightOffset = 0f;
+	public static float ObjectScale = 1f;
 	
 	public static string ExportBinary( MeshFilter filter )
 	{
@@ -99,7 +102,7 @@ public class STL
 	
 	public static string ExportBinary( MeshFilter[] filters )
 	{
-		string filePath = ExportPath() + "/" + Application.loadedLevelName + " " + DateTimeCode() + ".stl";
+		string filePath = ExportPath() + "/" + Application.loadedLevelName + "_" + DateTimeCode() + ".stl";
 		ExportBinary( filters, filePath );
 		return filePath;
 	}
@@ -142,8 +145,12 @@ public class STL
 					// get vertices and tranform them
 					mesh = filter.sharedMesh;
 					vertices = mesh.vertices;
-					for( int vx = 0; vx < vertices.Length; vx++ ){
-						vertices[ vx ] = filter.transform.localToWorldMatrix.MultiplyPoint( vertices[ vx ] );
+					for( int vx = 0; vx < vertices.Length; vx++ )
+					{
+						//vertices[vx] = filter.transform.localToWorldMatrix.MultiplyPoint( vertices[ vx ] );
+						vertices[vx] = CoordTransform * vertices[vx];
+						vertices[vx].z += HeightOffset;
+						vertices[vx] *= ObjectScale;
 					}
 					
 					// for each sub mesh ...
@@ -190,7 +197,7 @@ public class STL
 	
 	public static string ExportText( MeshFilter[] filters )
 	{
-		string filePath = ExportPath() + "/" + Application.loadedLevelName + " " + DateTimeCode() + ".stl";
+		string filePath = ExportPath() + "/" + Application.loadedLevelName + "_" + DateTimeCode() + ".stl";
 		ExportText( filters, filePath );
 		return filePath;
 	}
@@ -226,8 +233,12 @@ public class STL
 					// get vertices and tranform them
 					mesh = filter.sharedMesh;
 					vertices = mesh.vertices;
-					for( int vx = 0; vx < vertices.Length; vx++ ){
-						vertices[ vx ] = filter.transform.localToWorldMatrix.MultiplyPoint( vertices[ vx ] );
+					for( int vx = 0; vx < vertices.Length; vx++ )
+					{
+						//vertices[vx] = filter.transform.localToWorldMatrix.MultiplyPoint(vertices[vx]);
+						vertices[vx] = CoordTransform * vertices[vx];
+						vertices[vx].z += HeightOffset;
+						vertices[vx] *= ObjectScale;
 					}
 					
 					// for each sub mesh ...

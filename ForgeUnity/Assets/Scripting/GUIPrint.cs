@@ -2,7 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class GUIPrint : MonoBehaviour {
+public class GUIPrint : MonoBehaviour
+{
+	private Vector3 PlateBounds = new Vector3(225, 145, 150); //225 * 145 * 150mm
+	private Vector3 ObjectBounds = Vector3.zero;
 
     //Use this if not attached to any object
     //private void OnGUI()
@@ -49,16 +52,27 @@ public class GUIPrint : MonoBehaviour {
     //
     MeshFilter[] getMeshFilter(GameObject Selection)
     {
+		Vector3 min = new Vector3 (float.MaxValue, float.MaxValue, float.MaxValue);
+		Vector3 max = new Vector3 (float.MinValue, float.MinValue, float.MinValue);
+
         GameObject objects = Selection;
         List<MeshFilter> filterList = new List<MeshFilter>();
         MeshFilter[] filters = objects.GetComponentsInChildren<MeshFilter>();
         for (int f = 0; f < filters.Length; f++)
         {
-            if (filters[f] != null)
+			MeshFilter mesh = filters[f];
+
+			if (mesh != null)
             {
-                filterList.Add(filters[f]);
+				min = Vector3.Min(min, mesh.mesh.bounds.min);
+				max = Vector3.Min(max, mesh.mesh.bounds.max );
+          		filterList.Add(mesh);
             }
         }
+
+		ObjectBounds = max - min;
+		Debug.Log (ObjectBounds);
+
         return filterList.ToArray();
     }
 }

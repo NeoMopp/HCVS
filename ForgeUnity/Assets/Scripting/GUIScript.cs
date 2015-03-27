@@ -4,12 +4,23 @@ using System.Collections.Generic;
 
 public class GUIScript : MonoBehaviour 
 {
-    bool gui = true;
+	bool gui = true;
+
+	private Vector3 PlateBounds = new Vector3(225, 145, 150); //225 * 145 * 150mm <<<SWAP DIMENSIONS>>>
+	private Vector3 ObjectBounds = Vector3.zero; //1 Unity unit = 1mm
 
     public void Print()
     {
-        MeshFilter[] mesh = getMeshFilter(gameObject);
-        Debug.Log(STL.ExportBinary(mesh));
+		AdvancedPrint.Print(gameObject);
+
+        //MeshFilter[] mesh = getMeshFilter(gameObject);
+
+		//float scalar = Mathf.Min (Mathf.Min (PlateBounds.x / ObjectBounds.x, PlateBounds.y / ObjectBounds.y), PlateBounds.z / ObjectBounds.z);
+
+		//Debug.Log(ObjectBounds * scalar);
+		//STL.ObjectScale = scalar;
+
+        //Debug.Log(STL.ExportBinary(mesh));
     }
 
    
@@ -62,17 +73,29 @@ public class GUIScript : MonoBehaviour
     
     //Converts the selected object into a mesh which can be converted to .stl format and exported.
     MeshFilter[] getMeshFilter(GameObject Selection)
-    {
+	{
+		Vector3 min = new Vector3 (float.MaxValue, float.MaxValue, float.MaxValue);
+		Vector3 max = new Vector3 (float.MinValue, float.MinValue, float.MinValue);
+
         GameObject objects = Selection;
         List<MeshFilter> filterList = new List<MeshFilter>();
         MeshFilter[] filters = objects.GetComponentsInChildren<MeshFilter>();
-        for (int f = 0; f < filters.Length; f++)
+        foreach (MeshFilter meshFilter in filters)
         {
-            if (filters[f] != null)
-            {
-                filterList.Add(filters[f]);
+			if (meshFilter != null)
+			{
+				min = Vector3.Min(min, meshFilter.mesh.bounds.min);
+				max = Vector3.Max(max, meshFilter.mesh.bounds.max);
+
+				filterList.Add(meshFilter);
             }
-        }
+		}
+		
+		ObjectBounds = max - min;
+		//ObjectBounds /= Mathf.Max(Mathf.Max(ObjectBounds.x, ObjectBounds.y), ObjectBounds.z);
+
+		Debug.Log (ObjectBounds);
+
         return filterList.ToArray();
     }
 
