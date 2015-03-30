@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\STL\STL.cs">
+    <Files>
+      <File FileName="Assets\Scripting\AdvancedPrint.cs" Line="39" Column="4" />
+      <File FileName="Assets\STL\STL.cs" Line="149" Column="7" />
+      <File FileName="Assets\Scripting\GUIScript.cs" Line="14" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
