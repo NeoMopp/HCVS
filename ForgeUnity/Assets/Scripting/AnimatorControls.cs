@@ -7,22 +7,27 @@ using Pose = Thalmic.Myo.Pose;
 using UnlockType = Thalmic.Myo.UnlockType;
 using VibrationType = Thalmic.Myo.VibrationType;
 
-public class AnimatorControls : MonoBehaviour {
+public class AnimatorControls : MonoBehaviour
+{
 
     public Animator MainMenu, SubMenu;
     public GameObject myo = null;
     private Pose _lastPose = Pose.Unknown;
     public GameObject PrintButton = null, GuideButton = null, ResetButton = null, HorseshoeBut = null, HookBut = null, FreeBut = null;
+    public GameObject deformObj = null, hookObj = null, horeshoeObj = null;
+    private GameObject printObj = null;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         MainMenu.SetBool("IsHidden", true);
         SubMenu.SetBool("IsHidden", true);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
         //ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
 
         //if (thalmicMyo.pose != _lastPose)
@@ -36,31 +41,35 @@ public class AnimatorControls : MonoBehaviour {
         //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
         //    }
 
-        //    if (thalmicMyo.pose == Pose.WaveIn && MainMenu.GetBool("IsHidden")== true)
+        //    else if (thalmicMyo.pose == Pose.WaveIn && MainMenu.GetBool("IsHidden")== true)
         //    {
+        //        onWaveIn;
         //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
         //    }
 
-        //    if (thalmicMyo.pose == Pose.WaveOut && MainMenu.GetBool("IsHidden") == true)
+        //    else if (thalmicMyo.pose == Pose.WaveOut && MainMenu.GetBool("IsHidden") == true)
         //    {
+        //        onWaveOut;
         //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
         //    }
 
-        //    if (thalmicMyo.pose == Pose.Fist && MainMenu.GetBool("IsHidden") == true)
+        //    else if (thalmicMyo.pose == Pose.Fist && MainMenu.GetBool("IsHidden") == true)
         //    {
+        //        onFist;
         //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
         //    }
 
-        //    if (thalmicMyo.pose == Pose.FingersSpread && MainMenu.GetBool("IsHidden") == true)
+        //    else if (thalmicMyo.pose == Pose.FingersSpread && MainMenu.GetBool("IsHidden") == true)
         //    {
+        //        onFingersSpread;
         //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
         //    }
         //}
-        
+
         if (Input.GetKeyUp(KeyCode.Escape) && MainMenu.GetBool("IsHidden"))
         {
             Debug.LogError("Esc");
-            openMainMenu();              
+            openMainMenu();
         }
 
         else if (Input.GetKeyUp(KeyCode.Escape) && !MainMenu.GetBool("IsHidden"))
@@ -73,26 +82,26 @@ public class AnimatorControls : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.Backspace) && MainMenu.GetBool("StateChange") && !SubMenu.GetBool("IsHidden"))
         {
             Debug.LogError("Backspace");
-            closeSubMenu();         
+            closeSubMenu();
         }
-	}
+    }
 
     //Shows the main menu
-    public void openMainMenu()
+    private void openMainMenu()
     {
-        MainMenu.SetBool("IsHidden", false); 
+        MainMenu.SetBool("IsHidden", false);
         EventSystem.current.SetSelectedGameObject(PrintButton);
     }
 
     //Hides the main menu
-    public void closeMainMenu()
+    private void closeMainMenu()
     {
         MainMenu.SetBool("IsHidden", true);
         EventSystem.current.SetSelectedGameObject(null);
     }
 
     //Shows the sub menu while hiding the main menu
-    public void openSubMenu()
+    private void openSubMenu()
     {
         MainMenu.SetBool("StateChange", true);
         SubMenu.SetBool("IsHidden", false);
@@ -100,7 +109,7 @@ public class AnimatorControls : MonoBehaviour {
     }
 
     //Hides the sub menu while showing the main menu
-    public void closeSubMenu()
+    private void closeSubMenu()
     {
         SubMenu.SetBool("IsHidden", true);
         MainMenu.SetBool("StateChange", false);
@@ -108,7 +117,7 @@ public class AnimatorControls : MonoBehaviour {
     }
 
     //Invert the Mainmenu
-    public void switchMenu()
+    private void switchMenu()
     {
         MainMenu.SetBool("IsHidden", !MainMenu.GetBool("IsHidden"));
     }
@@ -131,8 +140,96 @@ public class AnimatorControls : MonoBehaviour {
     public void GuidePress()
     {
         openSubMenu();
-        
+
     }
+
+
+    //On print button press
+    public void PrintPress()
+    {
+        if (printObj != null)
+            AdvancedPrint.Print(printObj);
+
+        else
+            Debug.LogError("No printObj Assigned");
+    }
+
+    //On reset button press
+    public void ResetPress()
+    {
+        Debug.Log("Reset");
+    }
+
+    //On horseshoe button press
+    public void HorseShoePress()
+    {
+        Debug.Log("Horseshoe");
+        printObj = horeshoeObj;
+    }
+
+    //On hook button press
+    public void HookPress()
+    {
+        Debug.Log("Hook");
+        printObj = hookObj;
+    }
+
+    //On free button press
+    public void FreePress()
+    {
+        Debug.Log("Free");
+        printObj = deformObj;
+    }
+
+
+    //Controlling the menu through myo
+    private void onWaveIn()
+    {
+        if (EventSystem.current.currentSelectedGameObject == GuideButton)
+            EventSystem.current.SetSelectedGameObject(PrintButton);
+        else if (EventSystem.current.currentSelectedGameObject == ResetButton)
+            EventSystem.current.SetSelectedGameObject(GuideButton);
+        else if (EventSystem.current.currentSelectedGameObject == HookBut)
+            EventSystem.current.SetSelectedGameObject(HorseshoeBut);
+        else if (EventSystem.current.currentSelectedGameObject == FreeBut)
+            EventSystem.current.SetSelectedGameObject(HookBut);
+    }
+
+    private void onWaveOut()
+    {
+        if (EventSystem.current.currentSelectedGameObject == PrintButton)
+            EventSystem.current.SetSelectedGameObject(GuideButton);
+        else if (EventSystem.current.currentSelectedGameObject == GuideButton)
+            EventSystem.current.SetSelectedGameObject(ResetButton);
+        else if (EventSystem.current.currentSelectedGameObject == HorseshoeBut)
+            EventSystem.current.SetSelectedGameObject(HookBut);
+        else if (EventSystem.current.currentSelectedGameObject == HookBut)
+            EventSystem.current.SetSelectedGameObject(FreeBut);
+    }
+
+    //Emulation of enter press on button
+    private void onFist()
+    {
+        if (EventSystem.current.currentSelectedGameObject == PrintButton)
+            PrintPress();
+        else if (EventSystem.current.currentSelectedGameObject == GuideButton)
+            GuidePress();
+        else if (EventSystem.current.currentSelectedGameObject == ResetButton)
+            ResetPress();
+        else if (EventSystem.current.currentSelectedGameObject == HorseshoeBut)
+            HorseShoePress();
+        else if (EventSystem.current.currentSelectedGameObject == HookBut)
+            HookPress();
+        else if (EventSystem.current.currentSelectedGameObject == FreeBut)
+            FreePress();
+    }
+
+    private void onFingersSpread()
+    {
+        if (MainMenu.GetBool("StateChange") && !SubMenu.GetBool("IsHidden"))
+            closeSubMenu();
+    }
+
 }
 
 
