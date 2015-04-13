@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-//using LockingPolicy = Thalmic.Myo.LockingPolicy;
-//using Pose = Thalmic.Myo.Pose;
-//using UnlockType = Thalmic.Myo.UnlockType;
-//using VibrationType = Thalmic.Myo.VibrationType;
+using LockingPolicy = Thalmic.Myo.LockingPolicy;
+using Pose = Thalmic.Myo.Pose;
+using UnlockType = Thalmic.Myo.UnlockType;
+using VibrationType = Thalmic.Myo.VibrationType;
 
 public class AnimatorControls : MonoBehaviour
 {
 
     public Animator MainMenu, SubMenu;
     public GameObject myo = null;
-    //private Pose _lastPose = Pose.Unknown;
+    private Pose _lastPose = Pose.Unknown;
     public GameObject PrintButton = null, GuideButton = null, ResetButton = null, HorseshoeBut = null, HookBut = null, FreeBut = null;
     public GameObject deformObj = null, hookObj = null, horeshoeObj = null;
     private GameObject printObj = null;
@@ -22,49 +22,50 @@ public class AnimatorControls : MonoBehaviour
     {
         MainMenu.SetBool("IsHidden", true);
         SubMenu.SetBool("IsHidden", true);
+        printObj = deformObj;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        //ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
+        ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
 
-        //if (thalmicMyo.pose != _lastPose)
-        //{
-        //    _lastPose = thalmicMyo.pose;
-        //    
-        //    //This pose enables/diables the menu
-        //    if (thalmicMyo.pose == Pose.DoubleTap && MainMenu.GetBool("IsHidden"))
-        //    {
-        //        openMainMenu();
-        //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
-        //    }
+        if (thalmicMyo.pose != _lastPose)
+        {
+            _lastPose = thalmicMyo.pose;
 
-        //    else if (thalmicMyo.pose == Pose.WaveIn && MainMenu.GetBool("IsHidden")== true)
-        //    {
-        //        onWaveIn;
-        //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
-        //    }
+            //This pose enables/diables the menu
+            if (thalmicMyo.pose == Pose.DoubleTap && MainMenu.GetBool("IsHidden"))
+            {
+                openMainMenu();
+                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+            }
 
-        //    else if (thalmicMyo.pose == Pose.WaveOut && MainMenu.GetBool("IsHidden") == true)
-        //    {
-        //        onWaveOut;
-        //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
-        //    }
+            else if (thalmicMyo.pose == Pose.WaveIn && MainMenu.GetBool("IsHidden") == true)
+            {
+                onWaveIn();
+                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+            }
 
-        //    else if (thalmicMyo.pose == Pose.Fist && MainMenu.GetBool("IsHidden") == true)
-        //    {
-        //        onFist;
-        //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
-        //    }
+            else if (thalmicMyo.pose == Pose.WaveOut && MainMenu.GetBool("IsHidden") == true)
+            {
+                onWaveOut();
+                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+            }
 
-        //    else if (thalmicMyo.pose == Pose.FingersSpread && MainMenu.GetBool("IsHidden") == true)
-        //    {
-        //        onFingersSpread;
-        //        ExtendUnlockAndNotifyUserAction(thalmicMyo);
-        //    }
-        //}
+            else if (thalmicMyo.pose == Pose.Fist && MainMenu.GetBool("IsHidden") == true)
+            {
+                onFist();
+                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+            }
+
+            else if (thalmicMyo.pose == Pose.FingersSpread && MainMenu.GetBool("IsHidden") == true)
+            {
+                onFingersSpread();
+                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+            }
+        }
 
         if (Input.GetKeyUp(KeyCode.Escape) && MainMenu.GetBool("IsHidden"))
         {
@@ -124,17 +125,17 @@ public class AnimatorControls : MonoBehaviour
 
     // Extend the unlock if ThalmcHub's locking policy is standard, and notifies the given myo that a user action was
     // recognized.
-   //// void ExtendUnlockAndNotifyUserAction(ThalmicMyo myo)
-   // {
-   //     ThalmicHub hub = ThalmicHub.instance;
+    void ExtendUnlockAndNotifyUserAction(ThalmicMyo myo)
+    {
+        ThalmicHub hub = ThalmicHub.instance;
 
-   //     if (hub.lockingPolicy == LockingPolicy.Standard)
-   //     {
-   //         myo.Unlock(UnlockType.Timed);
-   //     }
+        if (hub.lockingPolicy == LockingPolicy.Standard)
+        {
+            myo.Unlock(UnlockType.Timed);
+        }
 
-   //     myo.NotifyUserAction();
-   // }
+        myo.NotifyUserAction();
+    }
 
     //On guide button press
     public void GuidePress()
