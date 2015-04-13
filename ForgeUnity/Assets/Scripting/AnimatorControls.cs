@@ -2,17 +2,17 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-using LockingPolicy = Thalmic.Myo.LockingPolicy;
-using Pose = Thalmic.Myo.Pose;
-using UnlockType = Thalmic.Myo.UnlockType;
-using VibrationType = Thalmic.Myo.VibrationType;
+//using LockingPolicy = Thalmic.Myo.LockingPolicy;
+//using Pose = Thalmic.Myo.Pose;
+//using UnlockType = Thalmic.Myo.UnlockType;
+//using VibrationType = Thalmic.Myo.VibrationType;
 
 public class AnimatorControls : MonoBehaviour
 {
 
     public Animator MainMenu, SubMenu;
     public GameObject myo = null;
-    private Pose _lastPose = Pose.Unknown;
+    //private Pose _lastPose = Pose.Unknown;
     public GameObject PrintButton = null, GuideButton = null, ResetButton = null, HorseshoeBut = null, HookBut = null, FreeBut = null;
     public GameObject deformObj = null, hookObj = null, horeshoeObj = null;
     private GameObject printObj = null;
@@ -124,17 +124,17 @@ public class AnimatorControls : MonoBehaviour
 
     // Extend the unlock if ThalmcHub's locking policy is standard, and notifies the given myo that a user action was
     // recognized.
-    void ExtendUnlockAndNotifyUserAction(ThalmicMyo myo)
-    {
-        ThalmicHub hub = ThalmicHub.instance;
+   //// void ExtendUnlockAndNotifyUserAction(ThalmicMyo myo)
+   // {
+   //     ThalmicHub hub = ThalmicHub.instance;
 
-        if (hub.lockingPolicy == LockingPolicy.Standard)
-        {
-            myo.Unlock(UnlockType.Timed);
-        }
+   //     if (hub.lockingPolicy == LockingPolicy.Standard)
+   //     {
+   //         myo.Unlock(UnlockType.Timed);
+   //     }
 
-        myo.NotifyUserAction();
-    }
+   //     myo.NotifyUserAction();
+   // }
 
     //On guide button press
     public void GuidePress()
