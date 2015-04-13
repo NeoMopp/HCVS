@@ -57,12 +57,16 @@
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
      <None Include="Assets\Deformable\readme.txt" />
+     <None Include="Assets\Deformable\_DemosCommomAssets\ColorVertex-Glossy.shader" />
      <None Include="Assets\3DForge\Fantasy_Interiors\Villages_&amp;_Towns\Documents\Village Interiors User Guid v1.3.txt" />
      <None Include="Assets\Myo\README-MyoUnity.txt" />
      <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
      <None Include="Assets\Plugins\x86\donotdelete.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/SoCS/Documents/HCVS/ForgeUnity/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>C:/Users/SoCS/Documents/HCVS/ForgeUnity/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>

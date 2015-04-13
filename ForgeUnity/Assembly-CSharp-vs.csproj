@@ -47,6 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Deformable\CSharp\Deformable.cs" />
+     <Compile Include="Assets\Deformable\CSharp\DemoScenes\CarDerby\Car.cs" />
+     <Compile Include="Assets\Deformable\CSharp\DemoScenes\CarDerby\DerbyCam.cs" />
+     <Compile Include="Assets\Deformable\CSharp\DemoScenes\CarDerby\Repair.cs" />
+     <Compile Include="Assets\Deformable\CSharp\DemoScenes\Cube\DemoCube.cs" />
+     <Compile Include="Assets\Deformable\CSharp\DemoScenes\MetalRain\MetalRain.cs" />
+     <Compile Include="Assets\Mine\Scripts\DeformHit.cs" />
+     <Compile Include="Assets\Mine\Scripts\KillForce.cs" />
+     <Compile Include="Assets\Mine\Scripts\OnHit.cs" />
+     <Compile Include="Assets\Mine\Scripts\Poses.cs" />
      <Compile Include="Assets\Myo Samples\Scripts\ColorBoxByPose.cs" />
      <Compile Include="Assets\Myo Samples\Scripts\JointOrientation.cs" />
      <Compile Include="Assets\Myo Samples\Scripts\SampleSceneGUI.cs" />
@@ -117,6 +126,7 @@
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
      <None Include="Assets\Deformable\readme.txt" />
+     <None Include="Assets\Deformable\_DemosCommomAssets\ColorVertex-Glossy.shader" />
      <None Include="Assets\3DForge\Fantasy_Interiors\Villages_&amp;_Towns\Documents\Village Interiors User Guid v1.3.txt" />
      <None Include="Assets\Myo\README-MyoUnity.txt" />
      <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
