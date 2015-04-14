@@ -89,6 +89,7 @@
      <Compile Include="Assets\Scripting\AdvancedPrint.cs" />
      <Compile Include="Assets\Scripting\AnimatorControls.cs" />
      <Compile Include="Assets\Scripting\Crosshair.cs" />
+     <Compile Include="Assets\Scripting\FireCollisions.cs" />
      <Compile Include="Assets\Scripting\GUIPrint.cs" />
      <Compile Include="Assets\Scripting\GUIScript.cs" />
      <Compile Include="Assets\Scripting\LockCamera.cs" />
