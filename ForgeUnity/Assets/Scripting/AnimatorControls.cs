@@ -85,6 +85,12 @@ public class AnimatorControls : MonoBehaviour
             Debug.LogError("Backspace");
             closeSubMenu();
         }
+
+        Deformable deform = deformObj.GetComponent<Deformable>();
+        if (deform.Hardness < 1.0f)
+        {
+            deform.Hardness += 0.001f;
+        }
     }
 
     //Shows the main menu
@@ -159,6 +165,8 @@ public class AnimatorControls : MonoBehaviour
     public void ResetPress()
     {
         Debug.Log("Reset");
+        Deformable deform = deformObj.GetComponent<Deformable>();
+        deform.Repair(1.0f);
     }
 
     //On horseshoe button press

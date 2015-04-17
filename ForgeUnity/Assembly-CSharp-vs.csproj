@@ -69,6 +69,7 @@
      <Compile Include="Assets\Myo\Scripts\Myo.NET\libmyo.cs" />
      <Compile Include="Assets\Myo\Scripts\ThalmicHub.cs" />
      <Compile Include="Assets\Myo\Scripts\ThalmicMyo.cs" />
+     <Compile Include="Assets\MyoLine.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRDisplay.cs" />
@@ -88,10 +89,12 @@
      <Compile Include="Assets\STL\STL.cs" />
      <Compile Include="Assets\Scripting\AdvancedPrint.cs" />
      <Compile Include="Assets\Scripting\AnimatorControls.cs" />
+     <Compile Include="Assets\Scripting\ColourChange.cs" />
      <Compile Include="Assets\Scripting\Crosshair.cs" />
      <Compile Include="Assets\Scripting\FireCollisions.cs" />
      <Compile Include="Assets\Scripting\GUIPrint.cs" />
      <Compile Include="Assets\Scripting\GUIScript.cs" />
+     <Compile Include="Assets\Scripting\ItemPickUp.cs" />
      <Compile Include="Assets\Scripting\LockCamera.cs" />
      <Compile Include="Assets\Scripting\UserActions.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\ExitOnEscape.cs" />

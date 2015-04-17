@@ -22,12 +22,16 @@ public class FireCollisions : MonoBehaviour {
 
     void OnTriggerStay(Collider other){
         Debug.Log("Mesh is within the trigger");
-        deform.Hardness = deform.Hardness += 0.1f;
-        Debug.Log(deform.Hardness);
+        if (deform.Hardness > 0.1f)
+        {
+            deform.Hardness -= 0.01f;
+        }
+        //Debug.Log(deform.Hardness);
     }
 
     void OnTriggerExit(Collider other){
         Debug.Log("Mesh Exited the trigger");
+        deform = null; 
 
     }
 
