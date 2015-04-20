@@ -15,7 +15,6 @@ public class JointOrientation : MonoBehaviour
     // Myo game object to connect with.
     // This object must have a ThalmicMyo script attached.
     public GameObject myo = null;
-    public float YRotation = 0;
 
     // A rotation that compensates for the Myo armband's orientation parallel to the ground, i.e. yaw.
     // Once set, the direction the Myo armband is facing becomes "forward" within the program.
@@ -84,28 +83,7 @@ public class JointOrientation : MonoBehaviour
 
         // Here the anti-roll and yaw rotations are applied to the myo Armband's forward direction to yield
         // the orientation of the joint.
-       transform.rotation = Quaternion.AngleAxis(YRotation, Vector3.up) * _antiYaw * antiRoll * Quaternion.LookRotation(myo.transform.forward);
-
-        //Quaternion currentQuat = transform.rotation;
-        //Quaternion desiredQuat = _antiYaw * antiRoll * Quaternion.LookRotation(myo.transform.forward);
-
-        //float currentRot, desiredRot = 0;
-        //Vector3 dummyVec = Vector3.zero;
-
-        //Vector3 myoAxis = Vector3.zero;
-
-        //currentQuat.ToAngleAxis(out currentRot, out dummyVec);
-        //desiredQuat.ToAngleAxis(out desiredRot, out myoAxis);
-
-        //float delta = desiredRot - currentRot;
-
-        //if (delta != -180)
-        //{
-        //    gameObject.rigidbody.AddTorque(Vector3.right * delta * 1000);
-
-        //    Debug.Log(myoAxis);
-        //    Debug.Log(delta);
-        //}
+        transform.rotation = _antiYaw * antiRoll * Quaternion.LookRotation (myo.transform.forward);
 
         // The above calculations were done assuming the Myo armbands's +x direction, in its own coordinate system,
         // was facing toward the wearer's elbow. If the Myo armband is worn with its +x direction facing the other way,
