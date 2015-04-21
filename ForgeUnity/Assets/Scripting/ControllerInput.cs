@@ -33,7 +33,9 @@ public class ControllerInput : MonoBehaviour {
 				Debug.Log("Left Trigger");
 			}
 
-		transform.Translate(Input.GetAxis("360_RightThumbStick_XAxis"),0,0);
+       // this.GetComponent<FixedJoint>().connectedBody.transform.Rotate(Input.GetAxis("360_RightThumbStick_XAxis"), Input.GetAxis("360_RightThumbStick_YAxis"),0);
+        transform.Rotate(Input.GetAxis("360_RightThumbStick_XAxis"), Input.GetAxis("360_RightThumbStick_YAxis"), 0);
+        transform.Translate(Input.GetAxis("360_LeftThumbStick_XAxis"), 0,Input.GetAxis("360_LeftThumbStick_YAxis"));
 
 	}
 }
