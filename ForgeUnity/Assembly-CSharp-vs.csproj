@@ -90,6 +90,7 @@
      <Compile Include="Assets\Scripting\AdvancedPrint.cs" />
      <Compile Include="Assets\Scripting\AnimatorControls.cs" />
      <Compile Include="Assets\Scripting\ColourChange.cs" />
+     <Compile Include="Assets\Scripting\ControllerInput.cs" />
      <Compile Include="Assets\Scripting\Crosshair.cs" />
      <Compile Include="Assets\Scripting\FireCollisions.cs" />
      <Compile Include="Assets\Scripting\GUIPrint.cs" />

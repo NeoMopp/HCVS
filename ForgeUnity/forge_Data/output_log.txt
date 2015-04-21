@@ -1,31 +1,31 @@
 Initialize engine version: 4.6.1f1 (d1db7a1b5196)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 10.1]
-    Renderer: ATI Radeon HD 3400 Series  (ID=0x95c5)
-    Vendor:   ATI
-    VRAM:     248 MB
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Vendor:   NVIDIA
+    VRAM:     1985 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\OpenNI.Net.dll (this message is harmless)
-Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\OpenNI.Net.dll into Unity Child Domain
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\ZDK.dll (this message is harmless)
-Loading C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\ZDK.dll into Unity Child Domain
-- Completed reload, in  0.068 seconds
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\OpenNI.Net.dll (this message is harmless)
+Loading D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\OpenNI.Net.dll into Unity Child Domain
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\ZDK.dll (this message is harmless)
+Loading D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\ZDK.dll into Unity Child Domain
+- Completed reload, in  0.040 seconds
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\System.dll (this message is harmless)
 Trying to open Kinect sensor using MS Kinect SDK
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -38,11 +38,65 @@ This also means you must quit the Unity Editor before using any compiled product
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
 Exception while attempting to start reader:
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Error initing Kinect SDK: 2197881471
+kinect10.dll
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -54,17 +108,31 @@ Trying to open sensor using OpenNI
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI
+System.DllNotFoundException: OpenNI
+  at (wrapper managed-to-native) OpenNI.SafeNativeMethods:xnInit (intptr&)
+  at OpenNI.Context.Init () [0x00000] in <filename unknown>:0 
+  at OpenNI.Context..ctor () [0x00000] in <filename unknown>:0 
+  at ZigInputOpenNI.Init (.ZigInputSettings settings) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 Exception while attempting to start reader:
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-One or more of the following nodes could not be enumerated:
-
-Device: PrimeSense/SensorKinect/5.1.2.1: The device is not connected!
-Device: PrimeSense/SensorV2/5.1.2.1: The device is not connected!
-Device: PrimeSense/SensorKinect/5.1.2.1: The device is not connected!
-Device: PrimeSense/SensorV2/5.1.2.1: The device is not connected!
-
+Error opening OpenNI context: OpenNI
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -72,100 +140,100 @@ failed opening sensor using OpenNI version 1, attempting to open the sensor with
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libNiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libNiTE2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libNiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\NiTE2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/NiTE2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libNiTE2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libNiTE2.dll
 ZigInputOpenNI2 Init
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
-Fallback handler could not load library C:/Users/SoCS/Documents/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/OpenNI2
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libOpenNI2.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libOpenNI2.dll
 Exception while attempting to start reader:
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -186,4 +254,38 @@ Kinect specific comopnent started
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Platform assembly: C:\Users\SoCS\Documents\HCVS\ForgeUnity\forge_Data\Managed\Boo.Lang.dll (this message is harmless)
+Platform assembly: D:\Unity\HCVS\ForgeUnity\forge_Data\Managed\Boo.Lang.dll (this message is harmless)
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/kinect10
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/.\libkinect10.dll
+Fallback handler could not load library D:/Unity/HCVS/ForgeUnity/forge_Data/Mono/libkinect10.dll
+Esc
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Esc
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Esc
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Esc
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
