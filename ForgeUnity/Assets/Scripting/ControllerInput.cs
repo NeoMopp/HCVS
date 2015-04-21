@@ -29,6 +29,9 @@ public class ControllerInput : MonoBehaviour {
 		}
 		if (Input.GetAxis("360_RightTrigger") > 0){
 				Debug.Log("Right Trigger");
+			GameObject.Find("Joint").transform.Rotate(Input.GetAxis("360_RightThumbStick_XAxis"), Input.GetAxis("360_RightThumbStick_YAxis"), 0);
+			GameObject.Find("Joint").transform.Translate(Input.GetAxis("360_LeftThumbStick_XAxis"), Input.GetAxis("360_LeftThumbStick_YAxis"), 0);
+
 			}
 		if (Input.GetAxis("360_LeftTrigger") > 0){
 				Debug.Log("Left Trigger");

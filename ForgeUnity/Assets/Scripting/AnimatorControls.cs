@@ -29,51 +29,51 @@ public class AnimatorControls : MonoBehaviour
     void Update()
     {
 
-        ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
+//        ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
+//
+//        if (thalmicMyo.pose != _lastPose)
+//        {
+//            _lastPose = thalmicMyo.pose;
+//
+//            //This pose enables/diables the menu
+//            if (thalmicMyo.pose == Pose.DoubleTap && MainMenu.GetBool("IsHidden"))
+//            {
+//                openMainMenu();
+//                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+//            }
+//
+//            else if (thalmicMyo.pose == Pose.WaveIn && MainMenu.GetBool("IsHidden") == true)
+//            {
+//                onWaveIn();
+//                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+//            }
+//
+//            else if (thalmicMyo.pose == Pose.WaveOut && MainMenu.GetBool("IsHidden") == true)
+//            {
+//                onWaveOut();
+//                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+//            }
+//
+//            else if (thalmicMyo.pose == Pose.Fist && MainMenu.GetBool("IsHidden") == true)
+//            {
+//                onFist();
+//                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+//            }
+//
+//            else if (thalmicMyo.pose == Pose.FingersSpread && MainMenu.GetBool("IsHidden") == true)
+//            {
+//                onFingersSpread();
+//                ExtendUnlockAndNotifyUserAction(thalmicMyo);
+//            }
+//        }
 
-        if (thalmicMyo.pose != _lastPose)
-        {
-            _lastPose = thalmicMyo.pose;
-
-            //This pose enables/diables the menu
-            if (thalmicMyo.pose == Pose.DoubleTap && MainMenu.GetBool("IsHidden"))
-            {
-                openMainMenu();
-                ExtendUnlockAndNotifyUserAction(thalmicMyo);
-            }
-
-            else if (thalmicMyo.pose == Pose.WaveIn && MainMenu.GetBool("IsHidden") == true)
-            {
-                onWaveIn();
-                ExtendUnlockAndNotifyUserAction(thalmicMyo);
-            }
-
-            else if (thalmicMyo.pose == Pose.WaveOut && MainMenu.GetBool("IsHidden") == true)
-            {
-                onWaveOut();
-                ExtendUnlockAndNotifyUserAction(thalmicMyo);
-            }
-
-            else if (thalmicMyo.pose == Pose.Fist && MainMenu.GetBool("IsHidden") == true)
-            {
-                onFist();
-                ExtendUnlockAndNotifyUserAction(thalmicMyo);
-            }
-
-            else if (thalmicMyo.pose == Pose.FingersSpread && MainMenu.GetBool("IsHidden") == true)
-            {
-                onFingersSpread();
-                ExtendUnlockAndNotifyUserAction(thalmicMyo);
-            }
-        }
-
-        if (Input.GetKeyUp(KeyCode.Escape) && MainMenu.GetBool("IsHidden"))
+        if (Input.GetKeyUp(KeyCode.P) && MainMenu.GetBool("IsHidden"))
         {
             Debug.LogError("Esc");
             openMainMenu();
         }
 
-        else if (Input.GetKeyUp(KeyCode.Escape) && !MainMenu.GetBool("IsHidden"))
+        else if (Input.GetKeyUp(KeyCode.P) && !MainMenu.GetBool("IsHidden"))
         {
             Debug.LogError("Esc");
             closeSubMenu();
@@ -89,7 +89,7 @@ public class AnimatorControls : MonoBehaviour
         Deformable deform = deformObj.GetComponent<Deformable>();
         if (deform.Hardness < 1.0f)
         {
-            deform.Hardness += 0.001f;
+            //deform.Hardness += 0.001f;
         }
     }
 
