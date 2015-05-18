@@ -16,22 +16,31 @@ public class FireCollisions : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other){
-        Debug.Log("Mesh Entered the trigger");
-        deform = other.GetComponent<Deformable>();
+        if (other.gameObject.name == "DeformableCube")
+        {
+            Debug.Log("Mesh Entered the trigger");
+            deform = other.GetComponent<Deformable>();
+        }
     }
 
     void OnTriggerStay(Collider other){
-        Debug.Log("Mesh is within the trigger");
-        if (deform.Hardness > 0.1f)
+        if (other.gameObject.name == "DeformableCube")
         {
-            deform.Hardness -= 0.01f;
+            Debug.Log("Mesh is within the trigger");
+            if (deform.Hardness > 0.1f)
+            {
+                deform.Hardness -= 0.01f;
+            }
+            //Debug.Log(deform.Hardness);
         }
-        //Debug.Log(deform.Hardness);
     }
 
     void OnTriggerExit(Collider other){
-        Debug.Log("Mesh Exited the trigger");
-        deform = null; 
+        if (other.gameObject.name == "DeformableCube")
+        {
+            Debug.Log("Mesh Exited the trigger");
+            deform = null;
+        }
 
     }
 
