@@ -16,7 +16,6 @@ public class AnimatorControls : MonoBehaviour
     public GameObject PrintButton = null, GuideButton = null, ResetButton = null, HorseshoeBut = null, HookBut = null, FreeBut = null;
     public GameObject deformObj = null, hookObj = null, horeshoeObj = null;
     private GameObject printObj = null;
-    private int counter = 0;
 
     // Use this for initialization
     void Start()
@@ -29,7 +28,6 @@ public class AnimatorControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        counter++;
         ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
 
         if (thalmicMyo.pose != _lastPose)
@@ -85,16 +83,6 @@ public class AnimatorControls : MonoBehaviour
         {
             Debug.LogError("Backspace");
             closeSubMenu();
-        }
-
-        Deformable deform = deformObj.GetComponent<Deformable>();
-        if (counter > 300)
-        {
-            if (deform.Hardness < 1.0f)
-            {
-                deform.Hardness += 0.001f;
-            }
-            counter = 0;
         }
     }
 
@@ -180,6 +168,7 @@ public class AnimatorControls : MonoBehaviour
         Debug.Log("Horseshoe");
         printObj = horeshoeObj;
         horeshoeObj.SetActive(true);
+        hookObj.SetActive(false);
         //change dimentions of deformable cube here
     }
 
@@ -189,6 +178,7 @@ public class AnimatorControls : MonoBehaviour
         Debug.Log("Hook");
         printObj = hookObj;
         hookObj.SetActive(true);
+        horeshoeObj.SetActive(false);
         //change dimentions of deformable cube here
     }
 

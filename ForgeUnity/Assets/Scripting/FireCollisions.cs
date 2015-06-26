@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FireCollisions : MonoBehaviour {
-
-    Deformable deform;
+public class FireCollisions : MonoBehaviour {   
 
 	// Use this for initialization
 	void Start () {
@@ -18,29 +16,24 @@ public class FireCollisions : MonoBehaviour {
     void OnTriggerEnter(Collider other){
         if (other.gameObject.name == "DeformableCube")
         {
-            Debug.Log("Mesh Entered the trigger");
-            deform = other.GetComponent<Deformable>();
+            other.GetComponentInChildren<MetalTemperature>().setinFire(true);
         }
     }
 
     void OnTriggerStay(Collider other){
         if (other.gameObject.name == "DeformableCube")
         {
-            Debug.Log("Mesh is within the trigger");
-            if (deform.Hardness > 0.1f)
-            {
-                deform.Hardness -= 0.01f;
-            }
-            //Debug.Log(deform.Hardness);
         }
     }
+
 
     void OnTriggerExit(Collider other){
         if (other.gameObject.name == "DeformableCube")
         {
-            Debug.Log("Mesh Exited the trigger");
-            deform = null;
+            //Debug.Log("Mesh Exited the trigger");
+            other.GetComponentInChildren<MetalTemperature>().setinFire(false);
         }
+       
 
     }
 
