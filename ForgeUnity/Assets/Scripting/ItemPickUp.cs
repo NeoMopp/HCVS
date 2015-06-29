@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
 public class ItemPickUp : MonoBehaviour {
 
     public AudioClip objectDetails;
+    public GameObject handRequired;
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +18,13 @@ public class ItemPickUp : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other) {
-        if (other.name == "RightHand" && this.name != "Forge_Nippers"){
-            //Drop tools
-        }
-        else if (other.name == "LeftHand" && this.name == "Forge_Nippers"){
+        Debug.LogError(other.name + "  is in the trigger");
+        if (other.name == handRequired.name)
+        {
+            //Set the correct tool here
+            //play sound
+            gameObject.SetActive(false);
+            audio.PlayOneShot(objectDetails);
         }
 
     }
@@ -30,17 +35,12 @@ public class ItemPickUp : MonoBehaviour {
     }
 
     void OnTriggerStay(Collider other ){
-        if (other.name == "RightHand" && this.name != "Forge_Nippers"){
-            //Drop tools
-            //objectDetails
-            other.GetComponent(this.GetType()).active = true;
-            Debug.LogError("Object picked up");
-            //audio.PlayOneShot(objectDetails);
-        }
-        else if (other.name == "LeftHand" && this.name == "Forge_Nippers"){
-            //PickUpTongs
-            audio.PlayOneShot(objectDetails);
-        }
+
     
+    }
+
+    public void setEnabled()
+    {
+        gameObject.SetActive(true);
     }
 }

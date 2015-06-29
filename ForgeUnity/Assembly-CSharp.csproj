@@ -100,6 +100,7 @@
      <Compile Include="Assets\Scripting\MetalTemperature.cs" />
      <Compile Include="Assets\Scripting\SoundController.cs" />
      <Compile Include="Assets\Scripting\SoundControls.cs" />
+     <Compile Include="Assets\Scripting\ToolController.cs" />
      <Compile Include="Assets\Scripting\UserActions.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\ExitOnEscape.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\HSBColor.cs" />
