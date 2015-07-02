@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using System.Collections;
 
 public class ToolController : MonoBehaviour {
@@ -17,7 +17,7 @@ public class ToolController : MonoBehaviour {
 	}
 
     //Sets the currently in use tool.
-    void setTool(string tName)
+    public void setTool(string tName)
     {
         if (toolA.name == tName)
         {

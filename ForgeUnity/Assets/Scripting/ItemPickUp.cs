@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 using System.Collections;
 
 public class ItemPickUp : MonoBehaviour {
@@ -18,11 +18,18 @@ public class ItemPickUp : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other) {
-        Debug.LogError(other.name + "  is in the trigger");
-        if (other.name == handRequired.name)
+        //Debug.LogError(other.name + "  is in the trigger");
+        if (gameObject.name == "ArbitraryCube" && other.gameObject == handRequired)
+        {
+            other.GetComponent<ToolController>().setTool("DeformableCube");
+            gameObject.SetActive(false);
+            audio.PlayOneShot(objectDetails);
+        }
+        if (other.gameObject == handRequired)
         {
             //Set the correct tool here
             //play sound
+            other.GetComponent<ToolController>().setTool(gameObject.name);
             gameObject.SetActive(false);
             audio.PlayOneShot(objectDetails);
         }
